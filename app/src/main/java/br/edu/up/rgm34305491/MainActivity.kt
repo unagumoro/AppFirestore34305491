@@ -1,4 +1,4 @@
-package com.google.firebase.example.fireeats
+package br.edu.up.rgm34305491
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

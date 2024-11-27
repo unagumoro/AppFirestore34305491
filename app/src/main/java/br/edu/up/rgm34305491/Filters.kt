@@ -1,9 +1,9 @@
-package com.google.firebase.example.fireeats
+package br.edu.up.rgm34305491
 
 import android.content.Context
 import android.text.TextUtils
-import com.google.firebase.example.fireeats.model.Restaurant
-import com.google.firebase.example.fireeats.util.RestaurantUtil
+import br.edu.up.rgm34305491.model.Restaurant
+import br.edu.up.rgm34305491.util.RestaurantUtil
 import com.google.firebase.firestore.Query
 
 /**

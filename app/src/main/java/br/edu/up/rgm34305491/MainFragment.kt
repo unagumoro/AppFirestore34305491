@@ -1,4 +1,4 @@
-package com.google.firebase.example.fireeats
+package br.edu.up.rgm34305491
 
 import android.app.Activity
 import android.os.Bundle
@@ -22,10 +22,10 @@ import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.example.fireeats.databinding.FragmentMainBinding
-import com.google.firebase.example.fireeats.adapter.RestaurantAdapter
-import com.google.firebase.example.fireeats.model.Restaurant
-import com.google.firebase.example.fireeats.viewmodel.MainActivityViewModel
+import br.edu.up.rgm34305491.databinding.FragmentMainBinding
+import br.edu.up.rgm34305491.adapter.RestaurantAdapter
+import br.edu.up.rgm34305491.model.Restaurant
+import br.edu.up.rgm34305491.viewmodel.MainActivityViewModel
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException

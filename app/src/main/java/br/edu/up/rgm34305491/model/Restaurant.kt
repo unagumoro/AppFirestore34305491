@@ -1,4 +1,4 @@
-package com.google.firebase.example.fireeats.model
+package br.edu.up.rgm34305491.model
 
 import com.google.firebase.firestore.IgnoreExtraProperties
 

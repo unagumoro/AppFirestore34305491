@@ -1,13 +1,13 @@
-package com.google.firebase.example.fireeats.adapter
+package br.edu.up.rgm34305491.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.firebase.example.fireeats.R
-import com.google.firebase.example.fireeats.databinding.ItemRestaurantBinding
-import com.google.firebase.example.fireeats.model.Restaurant
-import com.google.firebase.example.fireeats.util.RestaurantUtil
+import br.edu.up.rgm34305491.R
+import br.edu.up.rgm34305491.databinding.ItemRestaurantBinding
+import br.edu.up.rgm34305491.model.Restaurant
+import br.edu.up.rgm34305491.util.RestaurantUtil
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.toObject

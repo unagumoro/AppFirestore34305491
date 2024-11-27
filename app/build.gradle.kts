@@ -6,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "com.google.firebase.example.fireeats"
+    namespace = "br.edu.up.rgm34305491"
     compileSdk = 35
     defaultConfig {
-        applicationId = "com.google.firebase.example.fireeats"
+        applicationId = "br.edu.up.rgm34305491"
         minSdk = 23
         targetSdk = 35
         versionCode = 1
@@ -77,4 +77,16 @@ dependencies {
     // Third-party libraries
     implementation("me.zhanghai.android.materialratingbar:library:1.4.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
+
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
 }

@@ -1,4 +1,4 @@
-package com.google.firebase.example.fireeats
+package br.edu.up.rgm34305491
 
 import android.content.Context
 import android.os.Bundle
@@ -13,11 +13,11 @@ import com.bumptech.glide.Glide
 import com.google.android.gms.tasks.Task
 import com.google.android.gms.tasks.Tasks
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.example.fireeats.databinding.FragmentRestaurantDetailBinding
-import com.google.firebase.example.fireeats.adapter.RatingAdapter
-import com.google.firebase.example.fireeats.model.Rating
-import com.google.firebase.example.fireeats.model.Restaurant
-import com.google.firebase.example.fireeats.util.RestaurantUtil
+import br.edu.up.rgm34305491.databinding.FragmentRestaurantDetailBinding
+import br.edu.up.rgm34305491.adapter.RatingAdapter
+import br.edu.up.rgm34305491.model.Rating
+import br.edu.up.rgm34305491.model.Restaurant
+import br.edu.up.rgm34305491.util.RestaurantUtil
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.EventListener

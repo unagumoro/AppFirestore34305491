@@ -1,4 +1,4 @@
-package com.google.firebase.example.fireeats.adapter
+package br.edu.up.rgm34305491.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import android.util.Log

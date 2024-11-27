@@ -1,6 +1,6 @@
-package com.google.firebase.example.fireeats.util
+package br.edu.up.rgm34305491.util
 
-import com.google.firebase.example.fireeats.model.Rating
+import br.edu.up.rgm34305491.model.Rating
 import java.util.ArrayList
 import java.util.Random
 import java.util.UUID

@@ -1,4 +1,4 @@
-package com.google.firebase.example.fireeats
+package br.edu.up.rgm34305491
 
 import android.content.Context
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.google.firebase.example.fireeats.databinding.DialogFiltersBinding
-import com.google.firebase.example.fireeats.model.Restaurant
+import br.edu.up.rgm34305491.databinding.DialogFiltersBinding
+import br.edu.up.rgm34305491.model.Restaurant
 import com.google.firebase.firestore.Query
 
 /**
