@@ -25,6 +25,7 @@ import com.google.firebase.auth.ktx.auth
 import br.edu.up.rgm34305491.databinding.FragmentMainBinding
 import br.edu.up.rgm34305491.adapter.RestaurantAdapter
 import br.edu.up.rgm34305491.model.Restaurant
+import br.edu.up.rgm34305491.util.RestaurantUtil
 import br.edu.up.rgm34305491.viewmodel.MainActivityViewModel
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
