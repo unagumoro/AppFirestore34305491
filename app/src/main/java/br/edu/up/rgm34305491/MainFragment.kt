@@ -207,8 +207,14 @@ class MainFragment : Fragment(),
     }
 
     private fun onAddItemsClicked() {
-        // TODO(developer): Add random restaurants
-        showTodoToast()
+        val restaurantsRef = firestore.collection("restaurants")
+        for (i in 0..9) {
+            // Create random restaurant / ratings
+            val randomRestaurant = RestaurantUtil.getRandom(requireContext())
+
+            // Add restaurant
+            restaurantsRef.add(randomRestaurant)
+        }
     }
 
     private fun showSignInErrorDialog(@StringRes message: Int) {
