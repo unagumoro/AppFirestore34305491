@@ -2,11 +2,14 @@ package br.edu.up.rgm34305491.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
+import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.QuerySnapshot
 import java.util.ArrayList
+import java.util.EventListener
 
 /**
  * RecyclerView adapter for displaying the results of a Firestore [Query].
@@ -16,7 +19,8 @@ import java.util.ArrayList
  * many times as the user scrolls.
  */
 abstract class FirestoreAdapter<VH : RecyclerView.ViewHolder>(private var query: Query) :
-        RecyclerView.Adapter<VH>() {
+        RecyclerView.Adapter<VH>(),
+        com.google.firebase.firestore.EventListener<QuerySnapshot> {
 
     private var registration: ListenerRegistration? = null
 
@@ -65,4 +69,58 @@ abstract class FirestoreAdapter<VH : RecyclerView.ViewHolder>(private var query:
 
         private const val TAG = "FirestoreAdapter"
     }
+
+    private fun onDocumentAdded(change: DocumentChange) {
+        snapshots.add(change.newIndex, change.document)
+        notifyItemInserted(change.newIndex)
+    }
+
+    private fun onDocumentModified(change: DocumentChange) {
+        if (change.oldIndex == change.newIndex) {
+            // Item changed but remained in same position
+            snapshots[change.oldIndex] = change.document
+            notifyItemChanged(change.oldIndex)
+        } else {
+            // Item changed and changed position
+            snapshots.removeAt(change.oldIndex)
+            snapshots.add(change.newIndex, change.document)
+            notifyItemMoved(change.oldIndex, change.newIndex)
+        }
+    }
+
+    private fun onDocumentRemoved(change: DocumentChange) {
+        snapshots.removeAt(change.oldIndex)
+        notifyItemRemoved(change.oldIndex)
+    }
+
+    // Add this method
+    override fun onEvent(documentSnapshots: QuerySnapshot?, e: FirebaseFirestoreException?) {
+
+        // Handle errors
+        if (e != null) {
+            Log.w(TAG, "onEvent:error", e)
+            return
+        }
+
+        // Dispatch the event
+        if (documentSnapshots != null) {
+            for (change in documentSnapshots.documentChanges) {
+                // snapshot of the changed document
+                when (change.type) {
+                    DocumentChange.Type.ADDED -> {
+                        onDocumentRemoved(change)
+                    }
+                    DocumentChange.Type.MODIFIED -> {
+                        onDocumentRemoved(change)
+                    }
+                    DocumentChange.Type.REMOVED -> {
+                        onDocumentRemoved(change)
+                    }
+                }
+            }
+        }
+
+        onDataChanged()
+    }
+
 }
