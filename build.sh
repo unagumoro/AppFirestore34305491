@@ -9,3 +9,5 @@ cp mock-google-services.json app/google-services.json
 
 # Build
 ./gradlew clean build
+
+//1
