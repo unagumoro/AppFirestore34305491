@@ -166,5 +166,3 @@ changes to be accepted, the CLA must be signed. It's a quick process, we promise
 [google-cla]: https://cla.developers.google.com
 [stackoverflow]: http://stackoverflow.com/questions/tagged/firebase
 [global-gitignore]: https://help.github.com/articles/ignoring-files/#create-a-global-gitignore
-
-//1

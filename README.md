@@ -20,5 +20,3 @@ https://github.com/firebase/quickstart-android
 
 [gh-actions]: https://github.com/firebase/friendlyeats-android/actions
 [gh-actions-badge]: https://github.com/firebase/friendlyeats-android/workflows/Android%20CI/badge.svg
-
-//1
